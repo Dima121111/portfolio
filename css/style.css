@@ -91,6 +91,14 @@ body {
   z-index: -1;
 }
 
+.header::after {
+  content: "";
+  height: 150px;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  background-color: rgba(35, 82, 222, 0.5);
+}
 
 .menu {
   position: fixed;
@@ -103,7 +111,6 @@ body {
   padding-top: 72px;
   display: flex;
   justify-content: space-between;
-  background-color: #7792E0;
   align-items: center;
 }
 
@@ -794,10 +801,18 @@ body {
 @media (max-width: 992px) {
 
   /* header */
+  .header::after {
+    height: 60px;
+  }
+
   .logo {
+    z-index: 15;
     width: 110px;
     height: 36px;
-    z-index: 6;
+  }
+
+  .logo--active {
+    z-index: 0;
   }
 
   .menu__burger {
@@ -958,7 +973,7 @@ body {
 
   /* header */
   .header__title {
-    font-size: 30px;
+    font-size: 31px;
   }
 
   .header__subtitle {
