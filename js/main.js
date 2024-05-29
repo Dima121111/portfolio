@@ -22,7 +22,13 @@ $(function () {
   });
 })
 
-
-
-
-
+const content = document.querySelector('.menu')
+window.addEventListener('scroll', function () {
+  const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+  if (scrollPosition >= 300) {
+    content.classList.add('active')
+  } 
+  else {
+    content.classList.remove('active')
+  }
+})
